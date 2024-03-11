@@ -5,21 +5,22 @@ def solution(A, D):
     # starting the balance at an initial value of 0
     financial_balance = 0
     # initializing an empty list for the transactions
-    transaction_amounts = []
+    transactions = []
 
     # if to check if the length of array A and D are equal
     if len(A) == len(D):
       # looping through the arrays
         for i in range(len(A)):
-          # appending the arrays to the list of transactions
-            transaction_amounts.append((A[i], D[i]))
+          # appending the arrays to the list of transaction to store the amount and transaction date
+            transactions.append((A[i], D[i]))
 
-    # Loop through the list of transactions
-    for transaction in transaction_amounts:
+    # Looping through the list of transactions
+    for transaction in transactions:
       # assigning the transactions the date and amount
         amount, date = transaction
-        # splitting the date to get the date
+        # splitting the date to get the year
         year = date.split('-')[0]
+        # checking if there is a year
         if year:
           # adding the amount to the balance
             financial_balance += amount
