@@ -20,12 +20,12 @@ def solution(A, D):
         amount, date = transaction
         # splitting the date to get the date
         year = date.split('-')[0]
-        if year == '2020':
+        if year:
           # adding the amount to the balance
             balance += amount
 
     print(balance)
 
 
-solution(A=[1, -1, 0, -105], D=[
+solution(A=[-60, 60, -40, -20], D=[
          "2020-12-31", "2020-04-04", "2020-04-14", "2020-07-12"])
