@@ -3,28 +3,28 @@
 
 def solution(A, D):
     # starting the balance at an initial value of 0
-    balance = 0
+    financial_balance = 0
     # initializing an empty list for the transactions
-    transactions = []
+    transaction_amounts = []
 
     # if to check if the length of array A and D are equal
     if len(A) == len(D):
       # looping through the arrays
         for i in range(len(A)):
           # appending the arrays to the list of transactions
-            transactions.append((A[i], D[i]))
+            transaction_amounts.append((A[i], D[i]))
 
     # Loop through the list of transactions
-    for transaction in transactions:
+    for transaction in transaction_amounts:
       # assigning the transactions the date and amount
         amount, date = transaction
         # splitting the date to get the date
         year = date.split('-')[0]
         if year:
           # adding the amount to the balance
-            balance += amount
+            financial_balance += amount
 
-    print(balance)
+    print(financial_balance)
 
 
 solution(A=[-60, 60, -40, -20], D=[
