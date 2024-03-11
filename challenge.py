@@ -28,5 +28,5 @@ def solution(A, D):
     print(financial_balance)
 
 
-solution(A=[-60, 60, -40, -20], D=[
+solution(A=[100, 100, 100, -10], D=[
          "2020-12-31", "2020-04-04", "2020-04-14", "2020-07-12"])
